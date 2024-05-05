@@ -1,0 +1,802 @@
+@font-face {
+  font-family: yekan;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/iranyekanwebregularfanum.woff") format("woff");
+}
+:root {
+  --row-background: #f3f4f6 !important;
+  --row-light-background: #9bb7ee8d !important;
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: "";
+}
+
+html,
+:host {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+  tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
+}
+
+body {
+  font-family: "yekan" !important;
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-feature-settings: normal;
+  /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+input:where([type="button"]),
+input:where([type="reset"]),
+input:where([type="submit"]) {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+  font-family: "yekan";
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden] {
+  display: none;
+}
+
+*,
+::before,
+::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x: ;
+  --tw-pan-y: ;
+  --tw-pinch-zoom: ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position: ;
+  --tw-gradient-via-position: ;
+  --tw-gradient-to-position: ;
+  --tw-ordinal: ;
+  --tw-slashed-zero: ;
+  --tw-numeric-figure: ;
+  --tw-numeric-spacing: ;
+  --tw-numeric-fraction: ;
+  --tw-ring-inset: ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur: ;
+  --tw-brightness: ;
+  --tw-contrast: ;
+  --tw-grayscale: ;
+  --tw-hue-rotate: ;
+  --tw-invert: ;
+  --tw-saturate: ;
+  --tw-sepia: ;
+  --tw-drop-shadow: ;
+  --tw-backdrop-blur: ;
+  --tw-backdrop-brightness: ;
+  --tw-backdrop-contrast: ;
+  --tw-backdrop-grayscale: ;
+  --tw-backdrop-hue-rotate: ;
+  --tw-backdrop-invert: ;
+  --tw-backdrop-opacity: ;
+  --tw-backdrop-saturate: ;
+  --tw-backdrop-sepia: ;
+  --tw-contain-size: ;
+  --tw-contain-layout: ;
+  --tw-contain-paint: ;
+  --tw-contain-style: ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x: ;
+  --tw-pan-y: ;
+  --tw-pinch-zoom: ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position: ;
+  --tw-gradient-via-position: ;
+  --tw-gradient-to-position: ;
+  --tw-ordinal: ;
+  --tw-slashed-zero: ;
+  --tw-numeric-figure: ;
+  --tw-numeric-spacing: ;
+  --tw-numeric-fraction: ;
+  --tw-ring-inset: ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur: ;
+  --tw-brightness: ;
+  --tw-contrast: ;
+  --tw-grayscale: ;
+  --tw-hue-rotate: ;
+  --tw-invert: ;
+  --tw-saturate: ;
+  --tw-sepia: ;
+  --tw-drop-shadow: ;
+  --tw-backdrop-blur: ;
+  --tw-backdrop-brightness: ;
+  --tw-backdrop-contrast: ;
+  --tw-backdrop-grayscale: ;
+  --tw-backdrop-hue-rotate: ;
+  --tw-backdrop-invert: ;
+  --tw-backdrop-opacity: ;
+  --tw-backdrop-saturate: ;
+  --tw-backdrop-sepia: ;
+  --tw-contain-size: ;
+  --tw-contain-layout: ;
+  --tw-contain-paint: ;
+  --tw-contain-style: ;
+}
+.dwpc-container a {
+  color: inherit;
+  text-decoration: inherit;
+}
+.dwpc-container p {
+  margin: 0;
+}
+.dwpc-container img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.dwpc-container {
+  overflow: hidden;
+  border-top-width: 1px;
+  border-color: #e5e7eb;
+  color: #374151;
+}
+.dwpc-wraper {
+  display: flex;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  flex: 1;
+}
+.dwpc-table-header {
+  overflow: hidden;
+  margin-top: 1px;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-color: #d1d5db;
+}
+
+.dwpc-row {
+  display: flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  text-align: center;
+  color: #111827;
+}
+
+.dwpc-main-detail .dwpc-row:nth-child(2n-1),
+.dwpc-product-card .dwpc-row:nth-child(2n) {
+  background-color: var(--row-background);
+}
+.dwpc-main-detail .dwpc-row-light:nth-child(2n-1),
+.dwpc-product-card .dwpc-row-light:nth-child(2n) {
+  background-color: var(--row-light-background) !important;
+}
+/* .dwpc-bg-dark {
+  background-color: #f3f4f6;
+} */
+.dwpc-add-to-cart {
+  padding: 2rem;
+  border-bottom-left-radius: 0.5rem;
+  border-top-width: 1px;
+  border-color: #d1d5db;
+  text-align: center;
+}
+.dwpc-add-to-cart a {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  align-items: center;
+  border-radius: 0.25rem;
+  border-width: 0;
+  width: 100%;
+  color: #ffffff;
+  background-color: #6366f1;
+}
+.dwpc-add-to-cart div {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  align-items: center;
+  border-radius: 0.25rem;
+  border-width: 0;
+  width: 100%;
+}
+.dwpc-add-to-cart:hover a {
+  background-color: #4f46e5;
+}
+.dwpc-main-detail {
+  display: none;
+  margin-bottom: 5.55rem;
+  align-self: flex-end;
+}
+
+.dwpc-table-body {
+  display: flex;
+  border-radius: 0.5rem;
+  border-color: #d1d5db;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.dwpc-product-card {
+  margin-bottom: 2.5rem;
+  border-radius: 0.5rem;
+  border-width: 2px;
+  border-color: #d1d5db;
+  width: 100%;
+}
+
+.dwpc-btn-remove-compare {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+.dwpc-btn-remove-compare {
+  cursor: pointer;
+}
+.dwpc-btn-remove-compare::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f057";
+  font-size: 1.5rem;
+}
+.dwpc-product-card-detail {
+  display: flex;
+  position: relative;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  /* max-height: 20rem; */
+  text-align: center;
+  overflow: hidden;
+}
+.dwpc-product-card-detail-title {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #111827;
+}
+/* .dwpc-product-card p:nth-child(2n) {
+  border-top-width: 1px;
+  line-height: 1.625;
+} */
+
+@media (min-width: 640px) {
+  .dwpc-wraper {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .dwpc-wraper {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .dwpc-wraper {
+    max-width: 1024px;
+  }
+  .dwpc-main-detail {
+    display: block;
+    width: 25%;
+  }
+  .dwpc-table-body {
+    border-width: 1px;
+    width: 75%;
+  }
+  .dwpc-product-card {
+    margin-bottom: 0;
+    margin-top: 1px;
+    border-radius: 0;
+    border-style: none;
+  }
+}
+@media (min-width: 1280px) {
+  .dwpc-wraper {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .dwpc-wraper {
+    max-width: 1536px;
+  }
+}
+.py-5 {
+  padding-top: 1.25rem /* 20px */;
+  padding-bottom: 1.25rem /* 20px */;
+}
+
+/* CSS for compare button */
+.dwpc-card-buttons {
+  background-color: rgba(255, 255, 255, 0.79);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  opacity: 0;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* CSS to show button on hover */
+li:has(.dwpc-card-buttons):hover .dwpc-card-buttons {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+  transition: all 0.3s ease;
+}
+.dwpc-card-buttons a.dwpc-btn-compare {
+  position: relative;
+  width: 100%;
+  color: black;
+  font-family: "Font Awesome 5 Free";
+  text-decoration: none;
+  cursor: pointer;
+}
+.dwpc-card-buttons a.dwpc-btn-compare::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f074";
+  font-weight: 900;
+  padding: 10px 8px;
+  color: black !important;
+  font-size: 24px;
+}
+.dwpc-card-buttons a.dwpc-btn-compare::after,
+.dwpc-btn-remove-compare::after {
+  position: absolute;
+  top: calc(40% - 0.5em);
+  left: calc(50% - 0.5em);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-left-color: var(--color-gray-900);
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.dwpc-card-buttons a.dwpc-btn-compare:hover {
+  filter: invert(50%);
+}
+.dwpc-card-buttons a.dwpc-btn-compare.added::before {
+  content: "\f00c";
+}
+
+.dwpc-card-buttons a.dwpc-btn-compare.loading::before,
+.dwpc-btn-remove-compare.loading::before {
+  opacity: 0;
+}
+.dwpc-card-buttons a.dwpc-btn-compare.loading::after,
+.dwpc-btn-remove-compare.loading::after {
+  opacity: 1;
+  animation: wd-rotate 0.45s infinite linear;
+}
+
+@keyframes wd-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+tr {
+  display: block;
+  float: left;
+}
+th,
+td {
+  display: block;
+  border: 1px solid black;
+  height: 100%;
+}
+
+/* border-collapse */
+tr > *:not(:first-child) {
+  border-top: 0;
+}
+tr:not(:first-child) > * {
+  border-left: 0;
+}

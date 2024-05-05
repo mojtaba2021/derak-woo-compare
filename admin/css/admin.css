@@ -1,0 +1,34 @@
+#dwpc-general-settings-table > form > table > tbody > tr > th {
+  width: 300px !important;
+}
+.dwpc-shortcode .dashicons-clipboard {
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+}
+.dwpc-shortcode {
+  display: flex;
+  /* justify-content:center; */
+  align-items: center;
+}
+
+.dwpc-shortcode .dashicons-clipboard:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.dwpc-shortcode .dashicons-clipboard > .tooltiptext {
+  visibility: hidden;
+  width: 70px;
+  background-color: #555;
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px 0px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
