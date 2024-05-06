@@ -722,7 +722,7 @@ svg {
 }
 
 /* CSS to show button on hover */
-li:has(.dwpc-card-buttons):hover .dwpc-card-buttons {
+.opacity-visible-transform {
   opacity: 1;
   visibility: visible;
   transform: translate(-50%, 0);

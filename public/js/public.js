@@ -1,4 +1,16 @@
 jQuery(document).ready(function ($) {
+  var parent = $(".dwpc-card-buttons").parent();
+  console.log(parent);
+  parent.hover(
+    function () {
+      $(this).find(".dwpc-card-buttons").addClass("opacity-visible-transform");
+    },
+    function () {
+      $(this)
+        .find(".dwpc-card-buttons")
+        .removeClass("opacity-visible-transform");
+    }
+  );
   function checkCookie() {
     if (document.cookie.indexOf("dwpc_comparison_products") !== -1) {
       comparisonProducts = JSON.parse(getCookie("dwpc_comparison_products"));
