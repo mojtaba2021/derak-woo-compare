@@ -720,7 +720,42 @@ svg {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
-
+.dwpc-card-buttons-single-product {
+  background-color: rgba(255, 255, 255, 0.79);
+  z-index: 9999;
+  padding-top: 5px;
+  position: relative;
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+.dwpc-card-buttons-single-product a.dwpc-btn-compare::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f074";
+  font-weight: 900;
+  padding: 0 5px;
+  color: black !important;
+  font-size: 14px;
+  width: 100%;
+  text-decoration: none;
+  cursor: pointer;
+}
+.dwpc-card-buttons-single-product a.dwpc-btn-compare::after {
+  position: absolute;
+  /* top: calc(40% - 0.5em); */
+  right: 0;
+  top: 5px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  content: "";
+  /* display: inline-block; */
+  width: 1em;
+  height: 1em;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-left-color: var(--color-gray-900);
+  border-radius: 50%;
+  vertical-align: middle;
+}
 /* CSS to show button on hover */
 .opacity-visible-transform {
   opacity: 1;
@@ -763,15 +798,18 @@ svg {
 .dwpc-card-buttons a.dwpc-btn-compare:hover {
   filter: invert(50%);
 }
-.dwpc-card-buttons a.dwpc-btn-compare.added::before {
+.dwpc-card-buttons a.dwpc-btn-compare.added::before,
+.dwpc-card-buttons-single-product a.dwpc-btn-compare.added::before {
   content: "\f00c";
 }
 
 .dwpc-card-buttons a.dwpc-btn-compare.loading::before,
+.dwpc-card-buttons-single-product a.dwpc-btn-compare.loading::before,
 .dwpc-btn-remove-compare.loading::before {
   opacity: 0;
 }
 .dwpc-card-buttons a.dwpc-btn-compare.loading::after,
+.dwpc-card-buttons-single-product a.dwpc-btn-compare.loading::after,
 .dwpc-btn-remove-compare.loading::after {
   opacity: 1;
   animation: wd-rotate 0.45s infinite linear;
