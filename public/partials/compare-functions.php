@@ -1,11 +1,4 @@
 <?php
-// rewrite endpoint
-function wcpc_add_compare_endpoint()
-{
-    add_rewrite_endpoint('compare', EP_ROOT); // You can change 'comparison' to whatever you want
-}
-add_action('init', 'wcpc_add_compare_endpoint');
-
 // Add compare button to shop loop items
 function wcpc_add_compare_button_to_shop_loop()
 {

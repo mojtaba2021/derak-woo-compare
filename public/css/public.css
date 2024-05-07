@@ -505,6 +505,7 @@ video {
   --tw-contain-paint: ;
   --tw-contain-style: ;
 }
+
 .dwpc-container a {
   color: inherit;
   text-decoration: inherit;
@@ -519,6 +520,8 @@ svg {
   height: auto;
 }
 .dwpc-container {
+  font-size: 12px;
+  font-family: "yekan";
   overflow: hidden;
   border-top-width: 1px;
   border-color: #e5e7eb;

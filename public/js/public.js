@@ -1,6 +1,5 @@
 jQuery(document).ready(function ($) {
   var parent = $(".dwpc-card-buttons").parent();
-  console.log(parent);
   parent.hover(
     function () {
       $(this).find(".dwpc-card-buttons").addClass("opacity-visible-transform");
