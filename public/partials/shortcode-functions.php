@@ -47,9 +47,7 @@ function dwpc_compare_table_shortcode()
                             <div class="py-5">
                                 <?php echo $product->get_image(get_option('dwpc_product_picture_size')); ?>
                             </div>
-                            <h2 class="dwpc-product-card-detail-title">
-                                <?php echo $product->get_title(); ?>
-                            </h2>
+                            <a class="dwpc-product-card-detail-title" href="<?php echo get_permalink($product->get_id()) . '">' . $product->get_title() ?></a>
                         </div>
                         <?php foreach ($product_properties as $property): ?>
                             <p class="dwpc-row <?php echo esc_attr(get_option('dwpc_comparison_table_theme')) == 'theme1' ? '' : 'dwpc-row-light' ?>">
