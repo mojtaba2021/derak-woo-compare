@@ -575,6 +575,7 @@ svg {
   padding: 2rem;
   border-bottom-left-radius: 0.5rem;
   border-top-width: 1px;
+  height: 5.5rem;
   border-color: #d1d5db;
   text-align: center;
 }
